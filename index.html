@@ -1,88 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Animind Labs</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>Animind Labs | Learn in 10 Seconds</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
+/* ===== PART 2 CSS GOES HERE ===== */
 
-body{
-background:#050816;
-overflow:hidden;
-color:white;
-}
+</style>
 
-/* Animated Background */
+</head>
 
-body::before{
-content:"";
-position:fixed;
-width:250%;
-height:250%;
-background:
-radial-gradient(circle,#00d9ff55 0%,transparent 25%),
-radial-gradient(circle,#7c3aed55 0%,transparent 25%),
-radial-gradient(circle,#00ff8855 0%,transparent 25%);
-background-size:35% 35%;
-animation:bgmove 25s linear infinite;
-filter:blur(80px);
-z-index:-2;
-}
+<body>
 
-@keyframes bgmove{
+<!-- Animated Background -->
 
-0%{transform:translate(-10%,-10%) rotate(0deg);}
-50%{transform:translate(-20%,-15%) rotate(180deg);}
-100%{transform:translate(-10%,-10%) rotate(360deg);}
+<div class="background">
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
+<div class="grid"></div>
+<div id="particles"></div>
+</div>
 
-}
+<!-- Navbar -->
 
-/* Particles */
+<header>
 
-.particle{
-position:absolute;
-background:white;
-border-radius:50%;
-opacity:.4;
-animation:float linear infinite;
-}
+<div class="logo">
 
-@keyframes float{
+🧠 Animind Labs
 
-from{
-transform:translateY(100vh);
-}
+</div>
 
-to{
-transform:translateY(-120vh);
-}
+<nav>
 
-}
+<a href="#">Home</a>
 
-.hero{
+<a href="#about">About</a>
 
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
+<a href="#courses">Courses</a>
 
-}
+<a href="#videos">Videos</a>
 
-.card{
+<a href="#contact">Contact</a>
 
-width:95%;
-max-width:700px;
+</nav>
 
-background:rgba(255,255,255,.08);
+<a class="button" href="https://instagram.com/animindlabs" target="_blank">
 
+Follow
+
+</a>
+
+</header>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<span class="tag">
+
+LEARN • CREATE • INSPIRE
+
+</span>
+
+<h1>
+
+Learn in <span>10 Seconds</span>
+
+</h1>
+
+<p>
+
+Premium educational animations for
+Physics, Chemistry, Mathematics,
+Coding and AI.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#courses" class="primary">
+
+Start Learning
+
+</a>
+
+<a href="https://instagram.com/animindlabs"
+
+class="secondary">
+
+Instagram
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<div class="glass">
+
+🚀
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Stats -->
+
+<section class="stats">
+
+<div class="stat">
+
+<h2>100+</h2>
+
+<p>Animations</p>
+
+</div>
+
+<div class="stat">
+
+<h2>50K+</h2>
+
+<p>Students</p>
+
+</div>
+
+<div class="stat">
+
+<h2>24×7</h2>
+
+<p>Learning</p>
+
+</div>
+
+<div class="stat">
+
+<h2>100%</h2>
+
+<p>Free Concepts</p>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about" class="section">
+
+<h2>
+
+Why Animind Labs?
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>
+
+⚛ Physics
+
+</h3>
+
+<p>
+
+Animated concepts for Class 11–12.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🧪 Chemistry
+
+</h3>
+
+<p>
+
+Easy tricks with premium visuals.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+💻 Coding
+
+</h3>
+
+<p>
+
+C++, HTML, CSS and JavaScript.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Courses -->
+
+<section id="courses" class="section">
+
+<h2>
+
+Popular Categories
+
+</h2>
+
+<div class="course-grid">
+
+<div class="course">
+
+📘 Mathematics
+
+</div>
+
+<div class="course">
+
+⚛ Physics
+
+</div>
+
+<div class="course">
+
+🧪 Chemistry
+
+</div>
+
+<div class="course">
+
+💻 Programming
+
+</div>
+
+<div class="course">
+
+🤖 Artificial Intelligence
+
+</div>
+
+<div class="course">
+
+🎬 Science Animations
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Videos -->
+
+<section id="videos" class="section">
+
+<h2>
+
+Featured Videos
+
+</h2>
+
+<div class="video-grid">
+
+<div class="video">
+
+▶ Coming Soon
+
+</div>
+
+<div class="video">
+
+▶ Coming Soon
+
+</div>
+
+<div class="video">
+
+▶ Coming Soon
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact" class="section">
+
+<h2>
+
+Let's Connect
+
+</h2>
+
+<p>
+
+Follow Animind Labs on Instagram
+for premium educational content.
+
+</p>
+
+<a class="primary"
+
+href="https://instagram.com/animindlabs">
+
+Open Instagram
+
+</a>
+
+</section>
+
+<footer>
+
+© 2026 Animind Labs
+
+</footer>
+
+<script>
+
+/* ===== PART 3 JAVASCRIPT GOES HERE ===== */
+
+</script>
+
+</body>
+</html>
