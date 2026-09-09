@@ -468,7 +468,46 @@ font-size:24px;
 .why-box p{
 margin:0;
 font-size:16px;
+}.stats{
+padding:100px 8%;
+background:#08111f;
+text-align:center;
 }
+
+.stats h2{
+font-size:45px;
+margin-bottom:60px;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.stat{
+padding:40px;
+background:rgba(255,255,255,.06);
+border-radius:20px;
+transition:.3s;
+}
+
+.stat:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(0,212,255,.35);
+}
+
+.number{
+font-size:52px;
+font-weight:bold;
+color:#00d4ff;
+margin-bottom:10px;
+}
+
+.label{
+font-size:18px;
+color:#cbd5e1;
+  }
 </style>
 
 </head>
