@@ -639,7 +639,221 @@ Open Instagram
 
 <script>
 
-/* ===== PART 3 JAVASCRIPT GOES HERE ===== */
+// ===== Animated Particles =====
+
+const particles = document.getElementById("particles");
+
+for(let i=0;i<120;i++){
+
+const p=document.createElement("div");
+
+p.style.position="absolute";
+p.style.width=(Math.random()*4+2)+"px";
+p.style.height=p.style.width;
+
+p.style.left=Math.random()*100+"vw";
+p.style.top=Math.random()*100+"vh";
+
+p.style.borderRadius="50%";
+
+p.style.background="rgba(255,255,255,.8)";
+
+p.style.boxShadow="0 0 12px cyan";
+
+p.style.animation=
+"particleMove "+(Math.random()*20+10)+"s linear infinite";
+
+particles.appendChild(p);
+
+}
+
+const style=document.createElement("style");
+
+style.innerHTML=`
+
+@keyframes particleMove{
+
+0%{
+
+transform:translateY(0) translateX(0);
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh)
+
+translateX(120px);
+
+opacity:0;
+
+}
+
+}
+
+`;
+
+document.head.appendChild(style);
+
+// ===== Scroll Reveal =====
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".card,.course,.video,.stat")
+.forEach(el=>{
+
+el.style.opacity="0";
+
+el.style.transform="translateY(60px)";
+
+el.style.transition="1s";
+
+observer.observe(el);
+
+});
+
+// ===== Counter Animation =====
+
+document.querySelectorAll(".stat h2").forEach(counter=>{
+
+const finalText=counter.innerText;
+
+const number=parseInt(finalText);
+
+if(isNaN(number)) return;
+
+let value=0;
+
+const interval=setInterval(()=>{
+
+value+=Math.ceil(number/60);
+
+if(value>=number){
+
+counter.innerText=finalText;
+
+clearInterval(interval);
+
+}else{
+
+counter.innerText=value+"+";
+
+}
+
+},30);
+
+});
+
+// ===== Typing Effect =====
+
+const title=document.querySelector(".hero h1");
+
+const original=title.innerHTML;
+
+title.innerHTML="";
+
+let index=0;
+
+function type(){
+
+if(index<original.length){
+
+title.innerHTML+=original.charAt(index);
+
+index++;
+
+setTimeout(type,35);
+
+}
+
+}
+
+type();
+
+// ===== Mouse Glow =====
+
+const glow=document.createElement("div");
+
+glow.style.position="fixed";
+glow.style.width="180px";
+glow.style.height="180px";
+glow.style.borderRadius="50%";
+glow.style.pointerEvents="none";
+glow.style.background="radial-gradient(circle,rgba(0,212,255,.35),transparent)";
+glow.style.filter="blur(25px)";
+glow.style.zIndex="9999";
+
+document.body.appendChild(glow);
+
+document.addEventListener("mousemove",e=>{
+
+glow.style.left=e.clientX-90+"px";
+
+glow.style.top=e.clientY-90+"px";
+
+});
+
+// ===== Navbar Blur =====
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector("header");
+
+if(window.scrollY>80){
+
+nav.style.background="rgba(5,10,20,.85)";
+
+}else{
+
+nav.style.background="rgba(10,10,20,.45)";
+
+}
+
+});
+
+// ===== Hero Floating =====
+
+setInterval(()=>{
+
+const glass=document.querySelector(".glass");
+
+glass.animate([
+
+{transform:"translateY(0px)"},
+
+{transform:"translateY(-12px)"},
+
+{transform:"translateY(0px)"}
+
+],{
+
+duration:3000
+
+});
+
+},3000);
 
 </script>
 
