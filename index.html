@@ -6,19 +6,71 @@
 <title>Animind Labs</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
 
 body{
+background:#0b1120;
+color:white;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
 display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(10,10,20,.7);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+.logo span{
+color:#00d4ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#00d4ff;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-min-height:100vh;
-padding:60px 20px;
-background:linear-gradient(-45deg,#0f172a,#2563eb,#06b6d4,#9333ea);
+text-align:center;
+padding:20px;
+background:linear-gradient(-45deg,#08111f,#102a43,#0a4f70,#08111f);
 background-size:400% 400%;
-animation:bg 10s ease infinite;
-overflow:hidden;
-color:white;
+animation:bg 12s ease infinite;
 }
 
 @keyframes bg{
@@ -26,181 +78,91 @@ color:white;
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
 }
-.container{
-width:100%;
-max-width:900px;
-display:flex;
-flex-direction:column;
-align-items:center;
-}
-.card{
-background:rgba(255,255,255,.12);
-backdrop-filter:blur(15px);
-padding:40px;
-border-radius:25px;
-text-align:center;
-width:90%;
-max-width:420px;
-box-shadow:0 0 30px rgba(0,255,255,.3);
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
 }
 
-h1{
-font-size:42px;
-margin-bottom:10px;
+.hero p{
+font-size:22px;
+max-width:700px;
+color:#d6d6d6;
+margin-bottom:35px;
 }
 
-p{
-margin-bottom:25px;
-color:#ddd;
-}
-
-a{
+.btn{
 display:inline-block;
-padding:14px 28px;
-border-radius:50px;
+padding:15px 35px;
 background:#00d4ff;
-color:#000;
+color:black;
 text-decoration:none;
+border-radius:40px;
 font-weight:bold;
-box-shadow:0 0 20px #00d4ff;
 transition:.3s;
 }
 
-a:hover{
-transform:scale(1.08);
-box-shadow:0 0 35px #00d4ff;
-}
-  nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:15px 30px;
-background:rgba(0,0,0,.35);
-backdrop-filter:blur(10px);
-display:flex;
-justify-content:space-between;
-align-items:center;
+.btn:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #00d4ff;
 }
 
-nav h2{
-color:white;
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-font-weight:bold;
+.hero p{
+font-size:18px;
 }
 
-.subjects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-width:100%;
-max-width:900px;
-margin-top:40px;
+nav{
+padding:15px 5%;
 }
 
-.subject{
-background:rgba(255,255,255,.12);
-padding:25px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 0 20px rgba(0,255,255,.2);
-transition:.3s;
+nav ul{
+gap:15px;
+font-size:14px;
 }
 
-.subject:hover{
-transform:translateY(-8px);
 }
+
 </style>
+
 </head>
 
 <body>
 
 <nav>
-<h2> Animind Labs</h2>
 
-<div>
-<a href="#">Home</a>
-<a href="#">Subjects</a>
-<a href="#">Contact</a>
+<div class="logo">
+Animind<span>Labs</span>
 </div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#animations">Animations</a></li>
+<li><a href="#premium">Premium</a></li>
+<li><a href="#instagram">Instagram</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
 </nav>
 
-<div class="container" style="margin-top:100px;">
+<section class="hero" id="home">
 
-<div class="card">
-<h1>Learn in 10 Seconds </h1>
-<p>Premium educational animations for students.</p>
+<h1>Learn in 10 Seconds 🚀</h1>
 
-<a href="https://instagram.com/animindlabs" target="_blank">
-Follow on Instagram
+<p>
+Premium Science Animations for Physics, Chemistry, Maths, Coding and AI.
+</p>
+
+<a class="btn" href="#animations">
+Explore Animations
 </a>
-</div>
 
-<div class="subjects">
+</section>
 
-<div class="subject">
-<h2>⚛ Physics</h2>
-</div>
-
-<div class="subject">
-<h2>🧪 Chemistry</h2>
-</div>
-
-<div class="subject">
-<h2>📘 Maths</h2>
-</div>
-
-<div class="subject">
-<h2>💻 Coding</h2>
-</div>
-
-</div>
-
-</div>
-
-</body>
-</html>
-
-<div class="container">
-
-  <div class="card">
-    <h1>Animind Labs</h1>
-    <p>Learn in 10 Seconds 🚀</p>
-
-    <a href="https://instagram.com/animindlabs" target="_blank">
-      Follow on Instagram
-    </a>
-  </div>
-
-  <div class="card" style="margin-top:30px;">
-    <h2>What We Create</h2>
-    <p>🎬 Science Animations</p>
-    <p>💻 Coding Tutorials</p>
-    <p>⚡ Quick Learning</p>
-    <p>🧠 Premium Visuals</p>
-  </div>
-
-</div>
-
-</head>
-
-<body>
-
-<div class="card">
-    <h1> Animind Labs</h1>
-    <p>Learn in 10 Seconds 🚀</p>
-
-    <a href="https://instagram.com/animindlabs" target="_blank">
-        Follow on Instagram
-    </a>
-</div>
-<footer>
-  <p>© 2026 Animind Labs | Learn in 10 Seconds 🚀</p>
-</footer>
 </body>
 </html>
