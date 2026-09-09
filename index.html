@@ -788,17 +788,41 @@ Follow on Instagram
 
 <h2>Contact Animind Labs</h2>
 
-<p>
-Have a question, collaboration idea, or want premium content? Get in touch!
-</p>
+<p>Have a question or want to collaborate? Send us a message!</p>
 
-<div class="contact-box">
+<form action="https://formspree.io/f/xwlkwjdb" method="POST">
 
-<input type="text" placeholder="Your name">
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
 
-<input type="email" placeholder="Your email id">
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required>
 
-<textarea placeholder="Write your message..."></textarea>
+<input
+type="text"
+name="subject"
+placeholder="Subject"
+required>
+
+<textarea
+name="message"
+placeholder="Write your message..."
+rows="6"
+required></textarea>
+
+<button type="submit" class="send-btn">
+Send Message 🚀
+</button>
+
+</form>
+
+</section>
 
 <button class="send-btn">
 Send Message
