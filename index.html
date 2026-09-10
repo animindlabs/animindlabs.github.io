@@ -6,6 +6,38 @@
 <title>Animind Labs</title>
 
 <style>
+  .stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:80px 8%;
+}
+
+.stat-card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:35px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(255,255,255,.1);
+transition:.4s;
+}
+
+.stat-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(0,212,255,.4);
+}
+
+.stat-card h2{
+font-size:42px;
+color:#00d4ff;
+margin-bottom:10px;
+}
+
+.stat-card p{
+font-size:18px;
+color:#d1d5db;
+}
   .hero{
 padding:120px 20px;
 text-align:center;
@@ -877,6 +909,29 @@ Send Message 🚀
 </form>
 
 </section>
+  <section class="stats">
+
+<div class="stat-card">
+<h2>10+</h2>
+<p>Science Animations</p>
+</div>
+
+<div class="stat-card">
+<h2>4K+</h2>
+<p>Instagram Followers</p>
+</div>
+
+<div class="stat-card">
+<h2>50K+</h2>
+<p>Views Reached</p>
+</div>
+
+<div class="stat-card">
+<h2>100%</h2>
+<p>Creative Visual Learning</p>
+</div>
+
+  </section>
 
 
 
